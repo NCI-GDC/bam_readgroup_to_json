@@ -20,6 +20,4 @@ RUN pip install --no-deps -r requirements.txt \
 	&& pip install --no-deps *.whl \
 	&& rm -f *.whl requirements.txt
 
-ENTRYPOINT ["bam_readgroup_to_json"]
-
-CMD ["--help"]
+CMD ["bam_readgroup_to_json --help"]
