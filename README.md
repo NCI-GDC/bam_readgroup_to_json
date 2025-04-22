@@ -1,5 +1,6 @@
 # bam_readgroup_to_json
 
+bam read group to json
 Python Boilerplate contains all the boilerplate you need to create a Python package.
 
 ## Installation
