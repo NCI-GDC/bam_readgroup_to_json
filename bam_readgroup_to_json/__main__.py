@@ -59,7 +59,13 @@ def run(
 @click.command()
 @click.version_option(version=__version__)
 @click.option("--bam-path", "--bam_path", "-b", required=True, help="Bam file")
-@click.option("--mode", "-m", required=True, choices=("strict", "lenient"))
+@click.option(
+    "--mode",
+    "-m",
+    required=True,
+    type=click.Choice(["strict", "lenient"], case_sensitive=True),
+    help="Run in strict or lenient mode",
+)
 def main(
     bam_path: str,
     mode: str,
