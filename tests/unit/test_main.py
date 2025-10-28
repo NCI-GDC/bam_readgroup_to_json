@@ -12,7 +12,9 @@ class ThisTestCase(unittest.TestCase):
         self.runner = CliRunner()
 
     def test_pass(self):
-        result = self.runner.invoke(MOD.main)
+        result = self.runner.invoke(
+            MOD.main, ["-b", "tests/data/test.bam", "-m", "strict"]
+        )
         self.assertEqual(result.exit_code, 0)
 
 
